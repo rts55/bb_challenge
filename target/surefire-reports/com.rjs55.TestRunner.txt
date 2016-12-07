@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: com.rjs55.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 0.635 sec <<< FAILURE!
+When I log into the application(Scenario: This scenario demonstrates a user can log into the application)  Time elapsed: 0.007 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.rjs55.steps.SearchSteps.iLogIntoTheApplication(SearchSteps.java:23)
+	at ✽.When I log into the application(com/rjs55/features/newTest.feature:7)
+
+Scenario: This scenario demonstrates a user can log into the application  Time elapsed: 0.008 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.rjs55.steps.SearchSteps.iLogIntoTheApplication(SearchSteps.java:23)
+	at ✽.When I log into the application(com/rjs55/features/newTest.feature:7)
+
