@@ -25,9 +25,13 @@ public class ProjectDriver {
     @Value("${browser}")
     private String browser;
 
+    @Value("${geckodriver}")
+    private String geckoDriver;
+
     @PostConstruct
     public void setUpWebDriver() throws IOException {
         if (browser.equalsIgnoreCase("firefox")) {
+            System.setProperty("webdriver.gecko.driver", geckoDriver);
             webDriver = new FirefoxDriver();
         } else {
             String errorMessage = browser + " is not a recognised option.";

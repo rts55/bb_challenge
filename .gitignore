@@ -1,5 +1,5 @@
 .idea/vcs.xml
-log/*
-target/*
-target/generated-sources/
-target/generated-test-sources/
+*.iml
+.idea
+/log/*
+/target/*
