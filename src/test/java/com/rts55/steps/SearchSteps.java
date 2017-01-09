@@ -1,10 +1,9 @@
-package com.rjs55.steps;
+package com.rts55.steps;
 
-import com.rjs55.pages.Pages;
+import com.rts55.pages.Pages;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.junit.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.hamcrest.core.Is.is;

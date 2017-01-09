@@ -1,4 +1,4 @@
-package com.rjs55;
+package com.rts55;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

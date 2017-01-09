@@ -1,4 +1,4 @@
-package com.rjs55.pages;
+package com.rts55.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
