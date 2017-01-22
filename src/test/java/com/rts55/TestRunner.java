@@ -12,6 +12,7 @@ import java.util.Map;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(plugin = {"pretty", "com.cucumber.listener.ExtentCucumberFormatter"},
+//        tags = "",
         monochrome = true)
 
 
@@ -31,7 +32,7 @@ public class TestRunner {
         ExtentCucumberFormatter.addSystemInfo("Selenium version", "v2.53.0");
 
         // Also you can add system information using a hash map
-        Map systemInfo = new HashMap();
+        Map<String, String> systemInfo = new HashMap<String, String>();
         systemInfo.put("Cucumber version", "v1.2.3");
         systemInfo.put("Extent Cucumber Reporter version", "v1.1.1");
         ExtentCucumberFormatter.addSystemInfo(systemInfo);

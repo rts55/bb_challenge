@@ -1,20 +1,34 @@
 package com.rts55.steps;
 
+import com.rts55.domain.CurrentUser;
+import com.rts55.domain.UserBuilder;
 import com.rts55.pages.Pages;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import static com.rts55.domain.ClientType.MAIN;
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 public class SearchSteps {
 
     @Autowired
     private Pages pages;
 
+    @Autowired
+    private CurrentUser currentUser;
+
+    @Autowired
+    private UserBuilder userBuilder;
+
     private String subject;
+
+    @Given("^I am a valid user$")
+    public void iAmAValidUser() throws Throwable {
+        currentUser.set(userBuilder.clientType(MAIN).build());
+    }
 
     @Given("^I require information about \"([^\"]*)\"$")
     public void iRequireInformationAbout(String subject) throws Throwable {
