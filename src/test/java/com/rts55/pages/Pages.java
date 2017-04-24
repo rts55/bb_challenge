@@ -21,4 +21,8 @@ public class Pages {
     public AddComputerPage addComputerPage() {
         return new AddComputerPage(webDriver.getWebDriver());
     }
+
+    public EditComputerPage editPage() {
+        return new EditComputerPage(webDriver.getWebDriver());
+    }
 }

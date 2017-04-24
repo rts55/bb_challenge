@@ -17,7 +17,7 @@ Feature: This feature details the create functionality of the application
     When the user adds the new computer
     Then the computer will be added to the database
 
-  Scenario: User attempts to enter a computer without computer name
+  Scenario: User attempts to enter a computer without a computer name
     Given the user does not provide a computer name
     When the user adds the new computer
     Then the user will be informed the computer name is required

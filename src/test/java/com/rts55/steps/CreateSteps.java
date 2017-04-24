@@ -32,11 +32,7 @@ public class CreateSteps {
     @Autowired
     private ComputerBuilder computerBuilder;
 
-    @Given("^I am a valid user$")
-    public void iAmAValidUser() throws Throwable {
-        currentUser.set(userBuilder.build());
-        log.info("Current user {}", currentUser.get());
-    }
+
 
     @Given("^the user has valid details for a new computer$")
     public void theUserHasValidDetailsForANewComputer() throws Throwable {
@@ -90,4 +86,6 @@ public class CreateSteps {
         assertThat(pages.addComputerPage().getError(), is("Discontinued date\n" +
                 "Date ('yyyy-MM-dd')"));
     }
+
+
 }

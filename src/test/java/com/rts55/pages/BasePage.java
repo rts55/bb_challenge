@@ -10,10 +10,12 @@ import java.util.concurrent.TimeUnit;
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
-public class BasePage {
+class BasePage {
 
     private final WebDriver driver;
     private static final int DEFAULT_TIMEOUT = 30;
+    private static final By PAGE_HEADING = By.cssSelector("#main>h1");
+
 
     BasePage(WebDriver driver) {
         this.driver = driver;
@@ -33,6 +35,11 @@ public class BasePage {
         getDriver().manage().timeouts().implicitlyWait(numberOfSeconds, TimeUnit.SECONDS);
     }
 
+    boolean waitForPageHeadingToContainText(String pageHeading) {
+        waitForNumberOfSeconds(1);
+        return getDriver().findElement(PAGE_HEADING).getText().contains(pageHeading);
+    }
+
     void enterText(By elementIdentifier, String textToEnter) {
         waitForVisibilityOfElement(elementIdentifier);
         getDriver().findElement(elementIdentifier).sendKeys(textToEnter);
@@ -47,9 +54,18 @@ public class BasePage {
         new Select(getDriver().findElement(elementIdentifier)).selectByVisibleText(textToSelect);
     }
 
+    void selectElementByLinkText(String linkText) {
+        getDriver().findElement(By.linkText(linkText)).click();
+    }
+
     String getElementText(By elementIdentifier) {
         return getDriver().findElement(elementIdentifier).getText();
 
+    }
+
+    void replaceFieldText(By elementIdentifier, String textToEnter) {
+        getDriver().findElement(elementIdentifier).clear();
+        getDriver().findElement(elementIdentifier).sendKeys(textToEnter);
     }
 
     WebDriver getDriver() {

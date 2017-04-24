@@ -9,14 +9,11 @@ public class HomePage extends BasePage {
     private static final By ADD_NEW_COMPUTER = By.id("add");
     private static final By FILTER_FIELD = By.id("searchbox");
     private static final By FILTER_BUTTON = By.id("searchsubmit");
+    private static final By DONE_MESSAGE_IDENTIFIER = By.cssSelector(".alert-message.warning");
 
     HomePage(WebDriver driver) {
         super(driver);
         waitForPageTitle(PAGE_TITLE);
-    }
-
-    public String getHeading() {
-        return getDriver().findElement(ADD_NEW_COMPUTER).getText();
     }
 
     public void clickAddNewComputer() {
@@ -28,5 +25,12 @@ public class HomePage extends BasePage {
         clickElement(FILTER_BUTTON);
     }
 
+    public void selectComputer(String computer) {
+        waitForNumberOfSeconds(1);
+        selectElementByLinkText(computer);
+    }
 
+    public String getDoneMessage() {
+        return getDriver().findElement(DONE_MESSAGE_IDENTIFIER).getText();
+    }
 }
