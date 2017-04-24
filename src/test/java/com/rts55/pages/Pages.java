@@ -14,11 +14,11 @@ public class Pages {
         this.webDriver = webDriver;
     }
 
-    public WikipediaHomePage wikipediaHomePage() {
-        return new WikipediaHomePage(webDriver.getWebDriver());
+    public HomePage homePage() {
+        return new HomePage(webDriver.getWebDriver());
     }
 
-    public SearchResultPage searchResultPage() {
-        return new SearchResultPage(webDriver.getWebDriver());
+    public AddComputerPage addComputerPage() {
+        return new AddComputerPage(webDriver.getWebDriver());
     }
 }
