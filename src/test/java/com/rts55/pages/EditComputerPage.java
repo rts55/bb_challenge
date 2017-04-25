@@ -11,6 +11,7 @@ public class EditComputerPage extends BasePage {
 
     private static final By COMPUTER_NAME_FIELD = By.id("name");
     private static final By SAVE_COMPUTER_BUTTON = By.cssSelector("input[value='Save this computer']");
+    private static final By DELETE_BUTTON = By.cssSelector("input[value='Delete this computer']");
 
     EditComputerPage(WebDriver driver) {
         super(driver);
@@ -22,4 +23,7 @@ public class EditComputerPage extends BasePage {
         getDriver().findElement(SAVE_COMPUTER_BUTTON).click();
     }
 
+    public void deleteComputer() {
+        clickElement(DELETE_BUTTON);
+    }
 }
