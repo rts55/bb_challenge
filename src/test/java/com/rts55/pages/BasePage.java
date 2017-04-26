@@ -36,8 +36,12 @@ class BasePage {
     }
 
     boolean waitForPageHeadingToContainText(String pageHeading) {
-        waitForNumberOfSeconds(1);
-        return getDriver().findElement(PAGE_HEADING).getText().contains(pageHeading);
+        waitForNumberOfSeconds(5);
+        return getPageHeadingText().contains(pageHeading);
+    }
+
+    String getPageHeadingText() {
+        return getDriver().findElement(PAGE_HEADING).getText();
     }
 
     void enterText(By elementIdentifier, String textToEnter) {

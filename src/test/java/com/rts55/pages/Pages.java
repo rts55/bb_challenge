@@ -25,4 +25,8 @@ public class Pages {
     public EditComputerPage editPage() {
         return new EditComputerPage(webDriver.getWebDriver());
     }
+
+    public NoComputerPage noComputerFoundPage() {
+        return new NoComputerPage(webDriver.getWebDriver());
+    }
 }

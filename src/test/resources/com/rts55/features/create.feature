@@ -10,7 +10,7 @@ Feature: This feature details the create functionality of the application
   * Companies are provided as a predefined selection list
 
   Background:
-    Given I am a valid user
+    Given the user is valid
 
   Scenario: User is able to add a new computer to the database
     Given the user has valid details for a new computer

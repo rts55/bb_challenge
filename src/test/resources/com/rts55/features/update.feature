@@ -8,7 +8,7 @@ Feature: This feature details the update functionality of the application
   * The user can edit the computer name, introduced date, discontinued date and company
 
   Background:
-    Given I am a valid user
+    Given the user is valid
 
   Scenario: The user updates the computer name
     Given the user selects an existing record to edit

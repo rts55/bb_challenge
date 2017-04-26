@@ -5,7 +5,7 @@ Feature: This feature details the delete functionality of the application
   So that it is no longer recorded in the database
 
   Background:
-    Given I am a valid user
+    Given the user is valid
 
   Scenario:
     Given the user selects the record for company "New name"

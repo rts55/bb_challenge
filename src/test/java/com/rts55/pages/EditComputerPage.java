@@ -26,4 +26,9 @@ public class EditComputerPage extends BasePage {
     public void deleteComputer() {
         clickElement(DELETE_BUTTON);
     }
+
+    public String getPageHeading() {
+        waitForVisibilityOfElement(SAVE_COMPUTER_BUTTON);
+        return getPageHeadingText();
+    }
 }

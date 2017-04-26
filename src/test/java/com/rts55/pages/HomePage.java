@@ -26,7 +26,7 @@ public class HomePage extends BasePage {
     }
 
     public void selectComputer(String computer) {
-        waitForNumberOfSeconds(1);
+        waitForNumberOfSeconds(5);
         selectElementByLinkText(computer);
     }
 

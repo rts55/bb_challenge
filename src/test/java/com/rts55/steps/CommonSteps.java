@@ -15,8 +15,8 @@ public class CommonSteps {
     @Autowired
     private UserBuilder userBuilder;
 
-    @Given("^I am a valid user$")
-    public void iAmAValidUser() throws Throwable {
+    @Given("^the user is valid$")
+    public void theUserIsValid() throws Throwable {
         currentUser.set(userBuilder.build());
         log.info("Current user {}", currentUser.get());
     }
