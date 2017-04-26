@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriverException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
+@SuppressWarnings("SpringJavaAutowiredMembersInspection")
 @Slf4j
 public class Hooks {
 
