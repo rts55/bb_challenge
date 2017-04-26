@@ -1,7 +1,5 @@
-# bdd_automation_example
-A BDD style automation project using Spring data
-
-A common pattern I use for setting up bdd style of automation testing using selenium webdriver.
+# bdd_challenge
+Automated regressions tests for BackBase challenge
 
 ## Running the tests
 
@@ -14,7 +12,7 @@ mvn clean test
 Alternatively the tests can be run using TestRunner class and utilising the cucumber options
 
 ```
-tags=@Test
+tags=@regression
 ```
 
 ## Built With
@@ -25,4 +23,4 @@ tags=@Test
 
 ## Authors
 
-* **Richard Suller** - *Initial work*
+* **Richard Suller**
