@@ -10,7 +10,7 @@ import java.io.File;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(plugin = {"pretty", "com.cucumber.listener.ExtentCucumberFormatter:output/report.html"},
-        tags = "@test",
+        tags = "@regression",
         monochrome = true)
 
 
