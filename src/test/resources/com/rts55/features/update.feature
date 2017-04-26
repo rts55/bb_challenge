@@ -1,3 +1,4 @@
+@regression
 Feature: This feature details the update functionality of the application
 
   As a user

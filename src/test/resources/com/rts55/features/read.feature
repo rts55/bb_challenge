@@ -1,3 +1,4 @@
+@regression
 Feature: This feature details the search functionality of the application
 
   As a user

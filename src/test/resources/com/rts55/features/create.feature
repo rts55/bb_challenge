@@ -1,3 +1,4 @@
+@regression
 Feature: This feature details the create functionality of the application
 
   As I user

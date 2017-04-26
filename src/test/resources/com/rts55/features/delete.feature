@@ -1,3 +1,4 @@
+@regression
 Feature: This feature details the delete functionality of the application
 
   As a user
