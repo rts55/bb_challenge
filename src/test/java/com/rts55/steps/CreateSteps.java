@@ -3,7 +3,6 @@ package com.rts55.steps;
 import com.rts55.domain.Computer;
 import com.rts55.domain.ComputerBuilder;
 import com.rts55.domain.CurrentUser;
-import com.rts55.domain.UserBuilder;
 import com.rts55.pages.Pages;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -13,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.Assert.assertTrue;
 
 @SuppressWarnings("SpringJavaAutowiredMembersInspection")
 @Slf4j
@@ -25,9 +25,6 @@ public class CreateSteps {
 
     @Autowired
     private CurrentUser currentUser;
-
-    @Autowired
-    private UserBuilder userBuilder;
 
     @Autowired
     private ComputerBuilder computerBuilder;
@@ -66,7 +63,9 @@ public class CreateSteps {
 
     @Then("^the computer will be added to the database$")
     public void theComputerWillBeAddedToTheDatabase() throws Throwable {
-        pages.homePage().filterByName(currentUser.get().getComputer().getComputerName());
+        String computerName = currentUser.get().getComputer().getComputerName();
+        pages.homePage().filterByName(computerName);
+        assertTrue(pages.homePage().confirmComputerIsPresent(computerName));
     }
 
     @Then("^the user will be informed the computer name is required$")
@@ -86,6 +85,5 @@ public class CreateSteps {
         assertThat(pages.addComputerPage().getError(), is("Discontinued date\n" +
                 "Date ('yyyy-MM-dd')"));
     }
-
 
 }

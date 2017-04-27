@@ -33,4 +33,9 @@ public class HomePage extends BasePage {
     public String getDoneMessage() {
         return getDriver().findElement(DONE_MESSAGE_IDENTIFIER).getText();
     }
+
+    public boolean confirmComputerIsPresent(String computerName) {
+        waitForNumberOfSeconds(2);
+        return getDriver().findElement(By.linkText(computerName)).isDisplayed();
+    }
 }

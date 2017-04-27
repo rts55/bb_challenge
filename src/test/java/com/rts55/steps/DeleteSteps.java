@@ -24,8 +24,8 @@ public class DeleteSteps {
     @Autowired
     private Pages pages;
 
-    @Given("^the user selects the record for company \"([^\"]*)\"$")
-    public void theUserSelectsTheRecordForCompany(String computerName) throws Throwable {
+    @Given("^the user selects the record for computer (.*)$")
+    public void theUserSelectsTheRecordForComputer(String computerName) throws Throwable {
         Computer computer = computerBuilder.withComputerName(computerName).build();
         currentUser.get().setComputer(computer);
         pages.homePage().filterByName(computerName);

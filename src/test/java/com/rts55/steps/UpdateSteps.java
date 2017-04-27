@@ -28,7 +28,7 @@ public class UpdateSteps {
 
     @Given("^the user selects an existing record to edit$")
     public void theUserSelectsAnExistingRecordToEdit() throws Throwable {
-        Computer computer = computerBuilder.build();
+        Computer computer = computerBuilder.withComputerName("ACE").build();
         pages.homePage().filterByName(computer.getComputerName());
         pages.homePage().selectComputer(computer.getComputerName());
     }
